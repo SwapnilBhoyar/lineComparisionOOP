@@ -19,6 +19,10 @@ class lineFunction{
                         return false;
                 }
         }
+	int compaire(double length , double length1){
+		int result = Double.valueOf(length).compareTo(Double.valueOf(length1));
+		return result;
+	}
 }
 public class lineComparisionOOP{
 	public static void main(String args[]){
@@ -40,6 +44,13 @@ public class lineComparisionOOP{
 		}
 		else{
 			System.out.println("Lines are not equal!");
+		}
+		int compaire = lineFunctionObject.compaire(length , length1);
+		if(compaire >= 1){
+			System.out.println("line1 is greater than line2");
+		}
+		else if(compaire < 0){
+			System.out.println("line1 is less than line2");
 		}
 	}
 }
